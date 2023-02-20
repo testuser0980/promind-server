@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 ConnectToDB();
 
 // PORT
-const PORT = 2500;
+const PORT = process.env.PORT || 2500;
 
 // API Endpoints
 app.use("/api/auth", require("./routes/UserRoute"));
